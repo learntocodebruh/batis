@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BoardController {
     @Autowired
     BoardService boardService;
-    @RequestMapping(value="/")
+    @RequestMapping(value ="/")
     public String home(){
         return "home";
     }
-    @RequestMapping(value = "board/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/board/list", method = RequestMethod.GET)
     public String boardlist(Model model){
         model.addAttribute("list", boardService.getBoardList());
         return "list";
     }
-    @RequestMapping(value = "board/add", method = RequestMethod.GET)
+    @RequestMapping(value = "/board/add", method = RequestMethod.GET)
     public String addPost(){
         return "addpostform";
     }
-    @RequestMapping(value = "board/addok", method =RequestMethod.POST)
+    @RequestMapping(value = "/board/addok", method =RequestMethod.POST)
     public String addPostOK(BoardVO vo){
         if(boardService.insertBoard(vo) == 0)
             System.out.println("데이터 추가 실패");
@@ -33,13 +33,13 @@ public class BoardController {
             System.out.println("데이터 추가 성공!!!");
         return "redirect:list";
     }
-    @RequestMapping(value = "board/editform/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/board/editform/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
         BoardVO boardVO = boardService.getBoard(id);
         model.addAttribute("boardVO", boardVO);
         return "editform";
     }
-    @RequestMapping(value = "board/editok", method = RequestMethod.POST)
+    @RequestMapping(value = "/board/editok", method = RequestMethod.POST)
     public String editPostOk(BoardVO vo) {
         if(boardService.updateBoard(vo) == 0)
             System.out.println("데이터 수정 실패 ");
@@ -47,7 +47,7 @@ public class BoardController {
             System.out.println("데이터 수정 성공!!!");
         return "redirect:list" ;
     }
-    @RequestMapping(value = "board/view/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/board/view/{id}", method = RequestMethod.GET)
     public String view(@PathVariable("id") int id, Model model){
         BoardVO boardVO = boardService.getBoard(id);
         model.addAttribute("boardVO", boardVO);

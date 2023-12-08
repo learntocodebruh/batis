@@ -32,17 +32,4 @@ public class BoardDAO {
 		return sqlSession.update("Board.updateBoard", vo);
 	}
 
-//	public int deleteBoard(int seq) {
-//		String sql = "delete from BOARD where seq = " + seq;
-//		return jdbcTemplate.update(sql);
-//	};
-//
-//	public int updateBoard(BoardVO vo) {
-//		String sql = "update BOARD set "
-//				+ "title='" + vo.getTitle() + "',"
-//				+ "writer='" + vo.getWriter() + "',"
-//				+ "content='" + vo.getContent() + "',"
-//				+ "category='" + vo.getCategory() + "' where seq=" + vo.getSeq();
-//		return jdbcTemplate.update(sql);
-//	}
 }

@@ -36,6 +36,7 @@
 </head>
 <body>
 <h1>게시판</h1>
+<h3><a href="../login/logout">logout</a></h3>
 <table id="list" width="90%">
 <tr>
 	<th>Id</th>

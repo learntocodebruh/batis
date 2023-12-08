@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <p><a href="board/list">게시판으로 이동</a> </p>
+    <p><a href="login/login">로그인</a> </p>
 </body>
 </html>
