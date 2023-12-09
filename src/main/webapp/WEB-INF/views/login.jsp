@@ -18,6 +18,7 @@
     <div><label>Password: </label>
       <input type='password' name='password' /></div>
     <button type='submit'>login</button>
+    <button type="button" onclick="location.href = 'join'">Join</button>
   </form>
 </div>
 </body>

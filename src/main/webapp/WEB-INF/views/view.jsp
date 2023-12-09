@@ -11,10 +11,17 @@
 <body>
 
 <h1>View Page</h1>
+<p>TItle: ${boardVO.title}</p>
+<p>Singer: ${boardVO.singer}</p>
+<p>Year: ${boardVO.year}</p>
 <p>Category: ${boardVO.category}</p>
-<p>Title: ${boardVO.title}</p>
-<p>Writer: ${boardVO.writer}</p>
+<p>Producer: ${boardVO.producer}</p>
+<p>Nationality: ${boardVO.nationality}</p>
+<p>Link: ${boardVO.link}</p>
 <p>Content: ${boardVO.content}</p>
+
+
+
 <a href ="../list">Back</a>
 </body>
 </html>

@@ -4,18 +4,19 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Board">
     <select id="getBoard" resultType="board">
-        select * from BOARD where seq = #{seq}
+        select * from MUSIC where seq = #{seq}
     </select>
     <insert id="insertBoard">
-        insert into BOARD (category, title, writer, content) values(#{category}, #{title}, #{writer}, #{content})
+        insert into MUSIC (title, singer, year, category, producer, nationality, link, content, writer)
+        values(#{title}, #{singer}, #{year}, #{category}, #{producer}, #{nationality}, #{link}, #{content}, #{writer})
     </insert>
     <select id="getBoardList" resultType="board">
-        select * from BOARD order by seq desc
+        select * from MUSIC order by seq desc
     </select>
     <update id="updateBoard">
-        update BOARD set title=#{title}, content=#{content}, writer=#{writer}, category=#{category} where seq = #{seq}
+        update MUSIC set title=#{title}, singer=#{singer}, year=#{year}, category=#{category}, producer=#{producer}, nationality=#{nationality}, link=#{link}, content=#{content} where seq = #{seq}
     </update>
     <delete id="deleteBoard">
-        delete from BOARD where seq=#{seq}
+        delete from MUSIC where seq=#{seq}
     </delete>
 </mapper>

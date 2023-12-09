@@ -39,24 +39,26 @@
 <h3><a href="../login/logout">logout</a></h3>
 <table id="list" width="90%">
 <tr>
-	<th>Id</th>
-	<th>Category</th>
 	<th>Title</th>
-	<th>Writer</th>
-	<th>Content</th>
-	<th>Regdate</th>
+	<th>Singer</th>
+	<th>Year</th>
+	<th>Category</th>
+	<th>Producer</th>
+	<th>Nationality</th>
+	<th>Link</th>
 	<th>View</th>
 	<th>Edit</th>
 	<th>Delete</th>
 </tr>
 <c:forEach items="${list}" var="u">
 	<tr>
-		<td>${u.seq}</td>
-		<td>${u.category}</td>
 		<td>${u.title}</td>
-		<td>${u.writer}</td>
-		<td>${u.content}</td>
-		<td>${u.regdate}</td>
+		<td>${u.singer}</td>
+		<td>${u.year}</td>
+		<td>${u.category}</td>
+		<td>${u.producer}</td>
+		<td>${u.nationality}</td>
+		<td>${u.link}</td>
 		<td><a href="view/${u.seq}">View</a></td>
 		<td><a href="editform/${u.seq}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>

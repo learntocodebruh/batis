@@ -8,6 +8,11 @@ import org.springframework.stereotype.Repository;
 public class UserDAO {
     @Autowired
     SqlSessionTemplate sqlSession;
+
+    public int insertUser(UserVO vo) {
+        return sqlSession.update("User.insertUser",vo);
+    }
+
     public UserVO getUser(UserVO vo){
         return sqlSession.selectOne("User.getUser", vo);
     }
