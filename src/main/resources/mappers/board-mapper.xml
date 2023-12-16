@@ -19,4 +19,8 @@
     <delete id="deleteBoard">
         delete from MUSIC where seq=#{seq}
     </delete>
+    <select id="getBoardListByUser" parameterType="string" resultType="board">
+        SELECT * FROM MUSIC WHERE writer = #{userId} ORDER BY seq DESC
+    </select>
+
 </mapper>

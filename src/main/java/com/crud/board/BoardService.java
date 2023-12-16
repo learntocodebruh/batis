@@ -23,4 +23,6 @@ public class BoardService{
     public List<BoardVO> getBoardList() {
         return boardDAO.getBoardList();
     }
+    public List<BoardVO> getBoardListByUser(String userId) { return boardDAO.getBoardListByUser(userId);
+    }
 }

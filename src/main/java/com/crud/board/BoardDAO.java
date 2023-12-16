@@ -32,4 +32,7 @@ public class BoardDAO {
 		return sqlSession.update("Board.updateBoard", vo);
 	}
 
+	public List<BoardVO> getBoardListByUser(String userId) { return sqlSession.selectList("Board.getBoardListByUser", userId);
+	}
+
 }
